@@ -2,7 +2,7 @@
 \label{sec:id-assess}
 
 This section describes who and how risks and opportunities are identified and assessed.
-
+This is currently written when using the NOIRLab Risk Tool.
 
 \begin{enumerate}
 	\item The managing group creates a risk or opportunity in the ATS Risk Tool as a "Candidate."
@@ -21,18 +21,13 @@ Minimum content before saving in Risk Tool:
 	\item Risk Category --- Select from list (need to add list to RDO-71)
 	\item Risk Title --- Short, descriptive title
 	\item Risk Statement --- Description of risk, which must include the IF-THEN statement at a minimum.
+	\item Status --- Automatically set as "Candidate"
 \end{itemize}
 
 Optional fields:
 \begin{itemize}
 	\item Risk Sub Category --- Select from list (need to add list to RDO-71)
 	\item Parent --- Any applicable Parent risks
-\end{itemize}
-
-Automatically generated fields:
-\begin{itemize}
-	\item Risk ID --- Automatically generated unique identifier
-	\item Status --- Automatically set as "Candidate"
 \end{itemize}
 
 \subsection{RROB Candidate Risk Review}
@@ -49,30 +44,27 @@ Minimum content before submitting to RROB:
 	\item Cost or Schedule fields under Analyze Risk Quantitative, if over certain severity.
 	\item Plan Type, and a minimum of one related Reponse Plan
 	\item Realized Risk Plan --- Description of event trigger
+	\item All fields under Analyze Risk Quantitative --- note that these do not automatically populate any required fields.
+	\item Existential Risk
 \end{itemize}
 
 Optional fields:
 \begin{itemize}
 	\item Overall Impact --- Impact category that can override the automatically generated cost and schedule impact categories (sets to most severe)
 	\item Cost or Schedule Impact Description
-	\item All fields under Analyze Risk Quantitative --- note that these do not automatically populate any required fields.
-	\item Existential Risk --- RROB or POC set?
 	\item Related Actions
 \end{itemize}
 
-Automatically generated fields:
-\begin{itemize}
-	\item All fields under Analyze Risk Score.
-\end{itemize}
+Verify assessment in the automatically generated fields under Analyze Risk Score.
 
-\subsection{Continuous Reivew and Updates to Active Risks}
+\subsection{Continuous Review and Updates to Active Risks}
 
 TBD for RROB monthly meetings.
 Managing departments should review risks on a frequency based on severity.
 
 \subsection{Realized Risk Trigger}
 
-Reivew of all Reponse Plans and Actions by POC, and follow-up review with department management.
+Review of all Response Plans and Actions by POC, and follow-up review with department management.
 Department management review with RROB (required if over certain severity).
 Review with DO, RROB and department for any escalation, with any review and discussion with NOIRLab.
 
@@ -82,3 +74,15 @@ Review of close-out due to realized risk, or if event cannot trigger.
 RROB to review before retiring risk that didn't trigger.
 All actions should be completed in the Risk Tool (could include Jira tickets for follow-up work) before retiring risk that did trigger.
 Documentation updates should be considered.
+
+\subsection{Risk Assessment}
+
+There are six aspects to assessing the state of each risk and opportunity within a subsystem:
+\begin{enumerate}
+\item Identification:  identifying elements of risk in the department’s activity.
+\item Establishing time frame:  determining the likely time at which an event would come to pass.
+\item Assessing probability:  estimating the probability that an undesirable event may occur.
+\item Assessing severity:  gauging the severity of the impact that such an event would have on the status of the project if the event were to occur.
+\item Developing risk options:  developing plans to avoid, accept, mitigate, or transfer. 
+\item Developing a management response: consider how the project may respond if the event should occur.
+\end{enumerate}
