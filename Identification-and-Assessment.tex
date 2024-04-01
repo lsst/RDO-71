@@ -30,6 +30,9 @@ Optional fields:
 	\item Parent --- Any applicable Parent risks
 \end{itemize}
 
+Risks can be created as ``children'' of ``parent'' risks.
+This is appropriate for a risk that is anticipated as being realized in separate time-ordered phases, or as distinct parallel events that each have their own impact.
+The cost and schedule impact of the parent is the combined cost and schedule impact of its children, see the next section for details.
 
 \subsection{RROB Candidate Risk Review}
 
@@ -64,6 +67,18 @@ Optional fields:
 
 Verify assessment in the automatically generated fields under Analyze Risk Score.
 
+When analyzing a risk that is the parent of $N$ child risks:
+\begin{itemize}
+	\item First analyze the children separately, i.e. estimating Residual Probability $P_k$, Likely Cost $C_k$, and Likely Delay $S_k$ for the $k$-th risk, and repeating for all $k$ in the range $(1 \ldots N)$.
+	\item For each risk, calculate the Cost Exposure $E_k = C_k \times P_k$.
+	\item The combined Cost Exposure for the parent risk is just the sum of the Cost Exposures of its children, $E_{\rm total} = \sum_{k=1}^N E_k$.
+	\item The Likely Cost of the parent risk is the sum of the Likely Costs of its children, $C_{\rm total} = \sum_{k=1}^N C_k$.
+	\item The Residual Probability of the parent risk is its Cost Exposure divided by its Likely Cost, $P_{\rm total} = E_{\rm total} / C_{\rm total}$.
+	This is just the cost-weighted average of the child risks' Residual Probabilities, and is the most meaningful definition of probability for parent risks.
+	\item Other quantitative attributes of parent risks can be computed by simple summation (e.g. Minimum Cost, Maximum Delay, Schedule Exposure, etc).
+	\item Pre-response quantities of parent risks, such as Impact Scores, can be reverse engineered from their Residual Probabilities.
+\end{itemize}
+
 \subsection{Continuous Review and Updates to Active Risks}
 
 Risk Owners flag issues or proposed changes to Active Risks for review at an RROB monthly meeting.
@@ -83,6 +98,10 @@ Review with RROB is required if severity is above threshold (determined by RROB 
 Addressing a Realized Risk:
 Risk Owner works with department management to submit a Request Beyond Target (RBT) for additional resources needed to address the risk (see RTN-005 for the RBT process).
 RBT is reviewed by RDO, which works with department for any needed escalation to NOIRLab, SLAC or the funding agencies or Resource Forum.
+
+Additional resources for addressing risks are drawn from reserve funds.
+The annual budget for the reserve is estimated as the sum of the cost exposure over all parent risks.
+Currently, the cost exposure and budget calculations are performed outside the Risk Register in a companion tool (the ``Rubin View of the NOIRLab Risk Register'').
 
 \subsection{Retiring Risks}
 
