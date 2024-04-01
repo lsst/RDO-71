@@ -2,26 +2,26 @@
 \label{sec:id-assess}
 
 This section describes who and how risks and opportunities are identified and assessed.
-This is currently written when using the NOIRLab Risk Tool.
+This is currently written assuming that the Risk Register is implemented in NOIRLab's ATS Risk Tool.
 
 \begin{enumerate}
-	\item The managing group creates a risk or opportunity in the ATS Risk Tool as a "Candidate."
+	\item The managing group creates a risk or opportunity in the Risk Register as a "Candidate."
 	\item RROB reviews content, then either asks for more information or sets risk to "Active."
-	\item After 
+	\item After
 \end{enumerate}
 
 \subsection{Create Risk Item}
 
-Minimum content before saving in Risk Tool:
+Minimum content before saving in the Risk Register:
 \begin{itemize}
 	\item Project --- Rubin Operations
 	\item Risk Type --- Threat or Opportunity
 	\item Risk Department --- Select Rubin Observatory department which owns the risk and its assessment
-	\item Risk Owner --- Point-of-contact for ownership and technical information regarding risk
+	\item Risk Owner --- Point-of-contact for ownership and technical information regarding risk. Responsible for orchestrating the response to the risk.
 	\item Risk Category --- Select from list (need to add list to RDO-71)
 	\item Risk Title --- Short, descriptive title
 	\item Risk Statement --- Description of risk, which must include the IF-THEN statement at a minimum.
-	\item Status --- Automatically set as "Candidate"
+	\item Status --- Automatically set as ``Candidate''
 \end{itemize}
 
 Optional fields:
@@ -30,20 +30,27 @@ Optional fields:
 	\item Parent --- Any applicable Parent risks
 \end{itemize}
 
+
 \subsection{RROB Candidate Risk Review}
 
-Should be reviewed by POC before submitting.
-RROB to review for sufficiency and accuracy of information for managing group for ability to manage effectively as an Active risk.
+Should be reviewed by the Risk Owner before submitting.
+RROB to review for sufficiency and accuracy of information, to confirm ability of Risk Owner to manage effectively as an Active risk.
 
-Minimum content before submitting to RROB:
+Minimum content before submitting a Candidate Risk for review by the RROB:
 \begin{itemize}
-	\item Cost Impact --- According to risk table (need to add risk table to RDO-71)
+	\item Cost Impact --- According to risk table (need to add risk table to RDO-71).
 	\item Likelihood --- According to risk table (need to add risk table to RDO-71)
 	\item Schedule Impact --- According to risk table (need to add risk table to RDO-71)
-	\item Cost or Schedule Impact Description, if over certain severity.
-	\item Cost or Schedule fields under Analyze Risk Quantitative, if over certain severity.
-	\item Plan Type, and a minimum of one related Reponse Plan
-	\item Realized Risk Plan --- Description of event trigger
+	\item Cost and/or Schedule Impact Description
+	% if over certain severity. PJM: I think we always want a brief description of any impact we specify.
+	\item Cost and/or Schedule fields under Analyze Risk Quantitative, if impact is non-negligible.
+	The Likely Cost is the estimated cost of addressing the risk in the year after it is realized.
+	(All these short-term cost estimates are used to forecast the required annual level of reserve funds.)
+	The Likely Delay is the estimated length of delay to the Impacted Milestone.
+	If the Impacted Milestone is either ``Start of Operations'' or ``LSST Survey Completion,'' the Realized Risk Plan (see below) needs to include ``Extend Survey.''
+	(Such schedule delays incur a post-ops cost.)
+	\item Plan Type, and a minimum of one related Response Plan (i.e. how the risk will be mitigated)
+	\item Realized Risk Plan --- Description of event trigger, and the plan for how the risk will be addressed once it is realized.
 	\item All fields under Analyze Risk Quantitative --- note that these do not automatically populate any required fields.
 	\item Existential Risk
 \end{itemize}
@@ -51,7 +58,7 @@ Minimum content before submitting to RROB:
 Optional fields:
 \begin{itemize}
 	\item Overall Impact --- Impact category that can override the automatically generated cost and schedule impact categories (sets to most severe)
-	\item Cost or Schedule Impact Description
+	% \item Cost or Schedule Impact Description. PJM: See above, I think we always need a description any time we specify an impact.
 	\item Related Actions
 \end{itemize}
 
@@ -59,20 +66,29 @@ Verify assessment in the automatically generated fields under Analyze Risk Score
 
 \subsection{Continuous Review and Updates to Active Risks}
 
-TBD for RROB monthly meetings.
+Risk Owners flag issues or proposed changes to Active Risks for review at an RROB monthly meeting.
+
 Managing departments should review risks on a frequency based on severity.
 
-\subsection{Realized Risk Trigger}
+In the (May) Annual Scrub, Level 3 Team Leaders are invited to review, in the Scrub Sandbox, pertinent fields of risks that their team is affected by and which they are expected to help respond to.
+Modifications they propose are reviewed by the RROB and implemented in the Risk Register by the Risk Owners in the post-scrub implementation phase (June).
 
-Review of all Response Plans and Actions by POC, and follow-up review with department management.
-Department management review with RROB (required if over certain severity).
-Review with DO, RROB and department for any escalation, with any review and discussion with NOIRLab.
+\subsection{Addressing Realized Risks}
+
+Triggering a Realized Risk:
+Review of all Response Plans and Actions by Risk Owner, and follow-up review with department management.
+Risk Owner proposes change of Status from Active to Realized.
+Review with RROB is required if severity is above threshold (determined by RROB Chair).
+
+Addressing a Realized Risk:
+Risk Owner works with department management to submit a Request Beyond Target (RBT) for additional resources needed to address the risk (see RTN-005 for the RBT process).
+RBT is reviewed by RDO, which works with department for any needed escalation to NOIRLab, SLAC or the funding agencies or Resource Forum.
 
 \subsection{Retiring Risks}
 
 Review of close-out due to realized risk, or if event cannot trigger.
 RROB to review before retiring risk that didn't trigger.
-All actions should be completed in the Risk Tool (could include Jira tickets for follow-up work) before retiring risk that did trigger.
+All actions should be completed in the Risk Register (could include Jira tickets for follow-up work) before retiring risk that did trigger.
 Documentation updates should be considered.
 
 \subsection{Risk Assessment}
@@ -83,6 +99,6 @@ There are six aspects to assessing the state of each risk and opportunity within
 \item Establishing time frame:  determining the likely time at which an event would come to pass.
 \item Assessing probability:  estimating the probability that an undesirable event may occur.
 \item Assessing severity:  gauging the severity of the impact that such an event would have on the status of the project if the event were to occur.
-\item Developing risk options:  developing plans to avoid, accept, mitigate, or transfer. 
+\item Developing risk options:  developing plans to avoid, accept, mitigate, or transfer.
 \item Developing a management response: consider how the project may respond if the event should occur.
 \end{enumerate}
