@@ -98,19 +98,23 @@ This subsection includes the following tables to define risk likelihood categori
 	\item Table \ref{table:risk-overall-impacts} includes the definition of impact categories based on overall risk.
 	\item Table \ref{table:risk-cost-impacts} includes the definition of impact categories based on cost.
 	\item Table \ref{table:risk-schedule-impacts} includes the definition of impact categories based on schedule.
+	\item Table \ref{table:l1-schedule-delay} includes the definition of impact categories based on L1 milestones.
+	\item Table \ref{table:l2-schedule-delay} includes the definition of impact categories based on L2 milestones.
+	\item Table \ref{table:l3-schedule-delay} includes the definition of impact categories based on L3 milestones.
 	\item Table \ref{table:risk-performance-impacts} includes the definition of impact categories based on performance.
 \end{itemize}
 
 \begin{table}[H]
 \caption{Risk Likelihood Categories.}
 \label{table:risk-likelihood}
-\begin{tabular}{lll}
-\multicolumn{1}{c}{\textbf{Likelihood Category}} & \multicolumn{1}{c}{\textbf{Percent Chance}} & \multicolumn{1}{c}{\textbf{Definition}} \\
-Remote      & 10-20\% & Extremely unlikely to occur.                 \\
-Unlikely    & 21-40\% & May occur only in exceptional circumstances. \\
-Possible    & 41-60\% & Could occur in certain circumstances.        \\
-Likely      & 61-80\% & Probably will occur in many circumstances.   \\
-Very Likely & 81-90\% & Expected to occur in most circumstances.    
+\begin{tabular}{lc|ll}
+\hline
+\multicolumn{1}{|c|}{\textbf{Likelihood Category}} & \multicolumn{1}{|c|}{\textbf{Percent Chance}} & \multicolumn{1}{|c|}{\textbf{Definition}} \\ \hline
+\multicolumn{1}{|c|}{\textbf{Remote}}      & \multicolumn{1}{c|}{10-20\%} &  \multicolumn{1}{c|}{Extremely unlikely to occur.}                 \\ \hline
+\multicolumn{1}{|c|}{\textbf{Unlikely}}    & \multicolumn{1}{c|}{21-40\%} & \multicolumn{1}{c|}{May occur only in exceptional circumstances.} \\ \hline
+\multicolumn{1}{|c|}{\textbf{Possible}}    & \multicolumn{1}{c|}{41-60\%} & \multicolumn{1}{c|}{Could occur in certain circumstances.}        \\ \hline
+\multicolumn{1}{|c|}{\textbf{Likely}}     & \multicolumn{1}{c|}{61-80\%} & \multicolumn{1}{c|}{Probably will occur in many circumstances.}   \\ \hline
+\multicolumn{1}{|c|}{\textbf{Very Likely}} & \multicolumn{1}{c|}{81-90\%} & \multicolumn{1}{c|}{Expected to occur in most circumstances.}  \\ \hline
 \end{tabular}
 \end{table}
 
@@ -120,12 +124,12 @@ Very Likely & 81-90\% & Expected to occur in most circumstances.
 \begin{tabular}{|c|l|}
 \hline
 \textbf{Impact Category} & \multicolumn{1}{c|}{\textbf{Overall Impact}}                                                                                                    \\ \hline
-\textbf{Low}             & \begin{tabular}[c]{@{}l@{}}Any other impacts with respect to operations, project, or\\ initiative within the Programs or Services.\end{tabular} \\ \hline
-\textbf{Moderate}        & \begin{tabular}[c]{@{}l@{}}Any impacts with respect to delivering an NOIRLab Program\\ or Service POP milestone.\end{tabular}                   \\ \hline
-\textbf{Significant}     & \begin{tabular}[c]{@{}l@{}}Any impacts with respect to Key Performance Evaluation metric(s)\\ of an NOIRLab Program or Service.\end{tabular}    \\ \hline
-\textbf{Damaging/Major}  & \begin{tabular}[c]{@{}l@{}}Any impacts with respect to priorities in the POP or LRP of\\ an NOIRLab Program or Service.\end{tabular}            \\ \hline
+\textbf{Low}             & \begin{tabular}[c]{@{}l@{}}Impact to activities that affect internal (Rubin) aspects.\end{tabular} \\ \hline
+\textbf{Moderate}        & \begin{tabular}[c]{@{}l@{}}Impact could affect L1 and L2 milestones representing POP \\ expectations.\end{tabular}                   \\ \hline
+\textbf{Significant}     & \begin{tabular}[c]{@{}l@{}}Loss of ability or accuracy in evaluating performance to meet \\ milestones.\end{tabular}    \\ \hline
+\textbf{Damaging/Major}  & \begin{tabular}[c]{@{}l@{}}Potential changes in prioritization or delays to key deliverables.\end{tabular}            \\ \hline
 \textbf{Catastrophic/Extreme} &
-  \begin{tabular}[c]{@{}l@{}}Any impacts with respect to NOIRLab Center CA and\\ Programs CSAs, and/or impacting the mission of NOIRLab or\\ any constituent Programs or Services.\end{tabular} \\ \hline
+  \begin{tabular}[c]{@{}l@{}}Removing essential or critical aspects to the Rubin program or \\ key deliverables.\end{tabular} \\ \hline
 \end{tabular}
 \end{table}
 
@@ -135,11 +139,11 @@ Very Likely & 81-90\% & Expected to occur in most circumstances.
 \begin{tabular}{|c|l|}
 \hline
 \textbf{Impact Category}      & \multicolumn{1}{c|}{\textbf{Cost Impact}}                              \\ \hline
-\textbf{Low}                  & Minimal consequence.                                                   \\ \hline
-\textbf{Moderate}             & Cost variance less than or equal to 5\% of total approved FY baseline. \\ \hline
-\textbf{Significant}    & \begin{tabular}[c]{@{}l@{}}Cost variance greater than 5\% but less than or equal to 10\% of total \\ approved FY baseline.\end{tabular} \\ \hline
-\textbf{Damaging/Major} & \begin{tabular}[c]{@{}l@{}}Cost variance greater than 10\% but less than or equal to 15\% of total\\ approved FY baseline.\end{tabular} \\ \hline
-\textbf{Catastrophic/Extreme} & Cost variance greater than 15\% of total approved FY baseline.         \\ \hline
+\textbf{Low} & Minimal Consequences (\$100K \leq  \ Cost Variance)                                                   \\ \hline
+\textbf{Moderate}              & \begin{tabular}[c]{@{}l@{}} Cost variance is less than or equal to 5\% of the total \\ approved FY baseline (\leq \ \$3.5M) \end{tabular} \\ \hline
+\textbf{Significant}		& \begin{tabular}[c]{@{}l@{}} Cost variance greater than 5\% but less than or equal to \\ 10\% of the total approved FY baseline (\leq \ \$7M) \end{tabular} \\ \hline
+\textbf{Damaging/Major} & \begin{tabular}[c]{@{}l@{}} Cost variance greater than 10\% but less than or equal to \\ 15\% of the total approved FY baseline (\leq \ \$10.5M) \end{tabular} \\ \hline
+\textbf{Catastrophic/Extreme} & \begin{tabular}[c]{@{}l@{}} Cost variance greater than 15\% of the total approved \\ FY baseline ([Cost Variance] \textgreater \ \$10.5)   \end{tabular}      \\ \hline
 \end{tabular}
 \end{table}
 
@@ -157,6 +161,66 @@ Very Likely & 81-90\% & Expected to occur in most circumstances.
 \textbf{Damaging/Major}  & Critical path slips.                          \\ \hline
 \textbf{Catastrophic/Extreme} &
   \begin{tabular}[c]{@{}l@{}}Critical path slips and one or more critical milestones or events\\ cannot be met.\end{tabular} \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\caption{L1 Schedule Delay}
+\label{table:l1-schedule-delay}
+\begin{tabular}{|c|l|}
+\hline
+\textbf{Impact } &
+  \multicolumn{1}{c|}{\textbf{Performance Impact}} \\ \hline
+\textbf{Low} &
+  N\slash A \\ \hline
+\textbf{Moderate} &
+   N\slash A \\ \hline
+\textbf{Significant} &
+   Any potential L1 Delay \leq \ 1 month \\ \hline
+\textbf{Damaging/Major} &
+  Any anticipated L1 Delay \\ \hline
+\textbf{Catastrophic/Extreme} &
+  L1 \geq \ 3 months \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\caption{L2 Schedule Delay}
+\label{table:l2-schedule-delay}
+\begin{tabular}{|c|l|}
+\hline
+\textbf{Impact } &
+  \multicolumn{1}{c|}{\textbf{Performance Impact}} \\ \hline
+\textbf{Low} &
+  1 month \leq \ Delay \\ \hline
+\textbf{Moderate} &
+   \leq \ 1 Month \\ \hline
+\textbf{Significant} &
+   \leq \ 2 months \\ \hline
+\textbf{Damaging/Major} &
+  \leq \ 4 months \\ \hline
+\textbf{Catastrophic/Extreme} &
+ Delay  \textgreater \ 4 months \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\caption{L3 Schedule Delay}
+\label{table:l3-schedule-delay}
+\begin{tabular}{|c|l|}
+\hline
+\textbf{Impact } &
+  \multicolumn{1}{c|}{\textbf{Performance Impact}} \\ \hline
+\textbf{Low} &
+  2 months \leq \ Delay \\ \hline
+\textbf{Moderate} &
+   \leq \ 2 Months \\ \hline
+\textbf{Significant} &
+   \leq \ 4 months \\ \hline
+\textbf{Damaging/Major} &
+  \leq \ 6 months \\ \hline
+\textbf{Catastrophic/Extreme} &
+ Delay  \textgreater \ 6 months \\ \hline
 \end{tabular}
 \end{table}
 
