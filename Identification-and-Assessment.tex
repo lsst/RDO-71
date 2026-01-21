@@ -1,7 +1,7 @@
 \section{Risk \& Opportunity Identification and Assessment}
 \label{sec:id-assess}
 
-This section describes who and how risks and opportunities are identified and assessed.
+This section describes who identifies and assesses risks and opportunities, and how.
 This is currently written assuming that the Risk Register is implemented in NOIRLab's ATS Risk Tool.
 
 \subsection{Create Risk Item}
@@ -10,7 +10,7 @@ Minimum content before saving in the Risk Register:
 \begin{itemize}
 	\item Project --- Rubin Operations.
 	\item Risk Type --- ``Threat'' or ``Opportunity''.
-	\item Risk Department --- Select Rubin Observatory department which owns the risk and its assessment.
+	\item Risk Department --- Select the Rubin Observatory department that owns the risk and its assessment.
 	\item Risk Owner --- Point-of-contact for ownership, technical information, and responsible for orchestrating the response to the risk.
 	\item Risk Category --- Select from list provided by Section \ref{sec:risk-categories}.
 	\item Risk Title --- Short, descriptive title.
@@ -25,21 +25,21 @@ Optional fields:
 \end{itemize}
 
 Risks can be created as ``children'' of ``parent'' risks.
-This is appropriate for a risk that is anticipated as being realized in separate time-ordered phases, or as distinct parallel events that each have their own impact.
+This is appropriate for a risk anticipated to be realized in separate, time-ordered phases, or as distinct parallel events with their own impact.
 The cost and schedule impact of the parent is the combined cost and schedule impact of its children (see Section \ref{sec:risk-review} for details).
-In order for the combined impact to be simple to understand and estimate, child risks must be constructed to be fully independent (non-overlapping) and a complete set.
+For the combined impact to be simple to understand and estimate, child risks must be constructed as fully independent (non-overlapping) and form a complete set.
 (Risk owners who are considering breaking down a risk into component children should only make that move if they can satisfy these criteria.)
 
 \subsection{RROB Candidate Risk Review}
 \label{sec:risk-review}
 
-Risks are reviewed by the Risk Owner before submitting for review by the RROB.
-The Risk Owner is responsible for verifying assessment in the automatically generated fields in the Risk Register.
-The RROB reviews for sufficiency and accuracy of information and confirms ability of Risk Owner to manage effectively as an Active risk.
+The Risk Owner reviews risks before submitting for review by the RROB.
+The Risk Owner is responsible for verifying the assessment in the automatically generated fields in the Risk Register.
+The RROB reviews the sufficiency and accuracy of the information and confirms the Risk Owner's ability to manage the risk effectively as an Active risk.
 
 Minimum content before submitting a Candidate Risk for review by the RROB:
 \begin{itemize}
-	\item Status Description --- Records a list of Rubin teams involved with defining, assessing or implementing risk and plans.
+	\item Status Description --- Records a list of Rubin teams involved with defining, assessing, or implementing risk and plans.
 	\item Existential Risk --- The RROB will confirm or deny if a risk is existential.
 	\item Cost Impact --- Select from list provided by Table \ref{table:risk-cost-impacts}.
 	\item Schedule Impact --- Select from the list provided by Table \ref{table:risk-schedule-impacts}.
@@ -65,15 +65,15 @@ Optional fields:
 	\item Related Actions
 \end{itemize}
 
-Each risk is scored initially based on its Cost Impact and Schedule Impact. Following the NOIRLab Overall Impact Criteria, Risk Owners will also consider the Likely Cost, Likely Delay, and impact on the milestone to further evaluate the overall risk score. These additional points of assessment help Risk owners better differentiate prioritization and escalation. \\
+Each risk is scored initially based on its Cost Impact and Schedule Impact. In accordance with the NOIRLab Overall Impact Criteria, Risk Owners will also consider the Likely Cost, Likely Delay, and the milestone's impact to evaluate the overall risk score further. These additional points of assessment help Risk owners better differentiate between prioritization and escalation. \\
 \\
-As Risk Owners evaluate their risks, some risk scores will be elevated from their initial assessment. Risk Owners should bring these for discussion with their Associate Director to be potentially raised during the next RROB meeting. Additionally, if a risk score changes by more than 7 or if the risk score was greater than 17 prior to modification, the Risk Board will review whether escalation to Rubin Operations is necessary.
+As Risk Owners evaluate their risks, some risk scores will be elevated from their initial assessment. Risk Owners should bring these for discussion with their Associate Director to be potentially raised during the next RROB meeting. Additionally, if the risk score changes by more than 7 or is greater than 17 before modification, the Risk Board will review whether to escalate to Rubin Operations.
 
 
 When analyzing a risk that is the parent of $N$ child risks:
 
 \begin{itemize}
-	\item First analyze the children separately, i.e., estimating Residual Probability, $P_k$, Likely Cost, $C_k$, and Likely Delay, $S_k$, for the $k$-th risk, repeating for all $k$ in the range $(1 \ldots N)$.
+	\item First, analyze the children separately, i.e., estimating Residual Probability, $P_k$, Likely Cost, $C_k$, and Likely Delay, $S_k$, for the $k$-th risk, repeating for all $k$ in the range $(1 \ldots N)$.
 	\item For each child risk, calculate its Cost Exposure: $E_k = C_k \times P_k$.
 	\item The combined Cost Exposure for the parent risk is the sum of the Cost Exposures of its children: $E_{\rm total} = \sum_{k=1}^N E_k$.
 	\item The Likely Cost of the parent risk is the sum of the Likely Costs of its children: $C_{\rm total} = \sum_{k=1}^N C_k$.
@@ -86,11 +86,11 @@ When analyzing a risk that is the parent of $N$ child risks:
 \subsection{Continuous Review and Updates to Active Risks}
 
 Risk Owners flag issues or proposed changes to Active Risks for review at an RROB monthly meeting. 
-It is the goal of the RROB monthly meeting to cover at least 3-5 risks per month.
+The goal of the RROB monthly meeting is to cover 3-5 risks per month.
 
 All risks will be assessed twice yearly: during the Annual Scrub in May and again in the second half of the year. 
-In the (May) Annual Scrub, Level 3 Team Leaders are invited to review, in the ``Scrub Sandbox,'' pertinent fields of risks that their team is affected by and which they are expected to help respond to.
-Modifications they propose are reviewed by the RROB and implemented in the Risk Register by the Risk Owners in the post-scrub implementation phase (June).
+In the (May) Annual Scrub, Level 3 Team Leaders are invited to review, in the ``Scrub Sandbox,'' the pertinent risk fields that affect their team and for which they are expected to help respond.
+The modifications they propose are reviewed by the RROB and implemented in the Risk Register by the Risk Owners during the post-scrub implementation phase (June).
 
 For more significant and evolving risks, managing departments will review risks more often as necessary. 
 Any risks listed among the Top 15 Risks must be reviewed at least quarterly by the relevant Risk Owner. 
@@ -103,34 +103,34 @@ This applies to any risk of any Status.
 Triggering a Realized Risk:
 Risk Owner reviews all Response Plans and Actions, and there is a follow-up review with department management.
 Risk Owner proposes change of Status from ``Active'' to ``Realized.''
-Review by the RROB is required if the severity is above a threshold determined by RROB Chair.
+A review by the RROB is required if the severity exceeds a threshold determined by the RROB Chair.
 By default, any Realized Risk will be reviewed at least once every two months until it can be retired. 
-This review will also include a review of the plans and actions, not just the risks themselves. 
+This review will also include the plans and actions, not just the risks themselves. 
 
 Addressing a Realized Risk:
 Risk Owner works with department management to submit a Request Beyond Target (RBT) for additional resources needed to address the risk (see \citeds{RTN-005} for the RBT process).
-RBT is reviewed by RDO, which works with department for any needed escalation to NOIRLab, SLAC, funding agencies, or Resource Forum.
+RBT is reviewed by RDO, which works with the department to handle any needed escalations to NOIRLab, SLAC, funding agencies, or the Resource Forum.
 
 Additional resources for addressing risks are drawn from reserve funds.
 The annual budget for the reserve is estimated as the sum of the cost exposure over all parent risks.
 Currently, the cost exposure and budget calculations are performed outside the Risk Register in a companion tool (the ``Rubin View of the NOIRLab Risk Register'' Google sheet).
 
 While a risk is in the ``Realized'' state, the (on-going) quantitative analysis should yield the Residual Probability and associated Likely Cost and Likely Delay appropriate for the risk after both mitigation and partial (to-date) addressing of the risk.
-(Some risks take significant time, and multiple rounds of resource planning, to address.)
-This ensures that the Cost Exposure associated with the risk only captures the funds that are still likely to be required, not the total needed to fully address the risk.
+(Some risks take significant time and multiple rounds of resource planning to address.)
+This ensures that the Cost Exposure associated with the risk captures only the funds still likely to be required, not the total needed to fully address the risk.
 This ongoing analysis should be discussed during monthly meetings, at least every other month, until the risk has been addressed.
 
-In an effort to track Risk Mitigation within Jira, Risk owners will be expected to create epics based on the actions/plans for realized risks. 
-The Risk Owner should assign each Jira ticket to the Plan owner who will be responsible for delegating tasks associated with the Plan. 
-The Plan Owner will also outline the expected effort and impact when responding to risk realization, coordinate with associated Teams, establish criteria for completion and plan potential cost. 
-As actions are defined as a result of implementing response plans, Plan Owners will define Action Owners. 
-Action Owners will be responsible for coordinating actions with the associated Teams, addressing actions for risks with Significant impact or higher within their Due dates, and creating/maintaining subsequent Jira tickets associated to the parent Jira Epic. 
+To track Risk Mitigation in Jira, Risk owners will be expected to create epics for the actions/plans associated with realized risks. 
+The Risk Owner should assign each Jira ticket to the Plan owner, who will be responsible for delegating tasks associated with the Plan. 
+The Plan Owner will also outline the expected effort and impact when responding to risk realization, coordinate with associated Teams, establish criteria for completion, and plan potential costs. 
+As actions result from implementing response plans, Plan Owners will define Action Owners. 
+Action Owners will be responsible for coordinating actions with the associated Teams, addressing actions with risks of Significant impact or higher within their Due dates, and creating/maintaining subsequent Jira tickets associated with the parent Jira Epic. 
 
 \subsection{Retiring Risks}
 
-Risk Owner reviews the risk prior to close-out, be it a realized risk or if the risk's event cannot trigger.
-The RROB reviews the risk's associated plans and actions before retiring risk that did not trigger to ensure there is no impact to other risks.
-All actions should be completed in the Risk Register (could include Jira tickets for follow-up work) before retiring risk that did trigger.
+Risk Owner reviews the risk before close-out, whether it is a realized risk or if the risk's event cannot be triggered.
+The RROB reviews the risks' associated plans and actions before retiring a risk that did not trigger, to ensure there is no impact on other risks.
+All actions should be completed in the Risk Register (including Jira tickets for follow-up work) before retiring the risk that triggered.
 Documentation updates should be considered during this review.
 A conclusion statement is included in the Risk Register to record the reason for retiring or depreciating a risk.
 
@@ -148,9 +148,9 @@ There are six aspects to assessing the state of each risk and opportunity within
 
 \subsection{Authority of Risks}
 
-In some cases, the RDO may delegate the authority to manage risks, plans, actions and mitigation funding decisions to an Associate Director for faster mitigation and greater operational flexibility. 
+In some cases, the RDO may delegate authority to manage risks, plans, actions, and mitigation funding decisions to an Associate Director to expedite mitigation and enhance operational flexibility. 
 The Associate Director may then delegate lower priority risks to Team Leads. 
-The Risk Board agrees upon all delegation of responsibilities. 
+The Risk Board agrees to all delegations of responsibility. 
 For guidelines of appropriate delegations, see the Rubin Observatory Risk Management Tool User Guide:
 \begin{itemize}
 	\item AD\textquotesingle s have authority if the Risk Score is less than 10 and do not impact L1\slash L2 milestones
@@ -160,7 +160,7 @@ For guidelines of appropriate delegations, see the Rubin Observatory Risk Manage
 \end{itemize}
 
 \subsection{Risk Reporting}
-The Risk Board will report to NOIRLab on a monthly basis.
- This report will highlight the risks discussed during the monthly meeting, any updated risks in status or impact, any risks whose risk score has been changed by more than 7, any risks whose risk score prior to change was more than 17, any risks whose impact category exceeds the threshold of damaging/major, and any risks whose contingency draws on NOIRLab funds. 
- If escalation is needed beyond NOIRLab, the Risk Board will review with the RDO prior to engaging with the agencies. 
+The Risk Board will report to NOIRLab monthly.
+ This report will highlight the risks discussed during the monthly meeting, any updated risks in status or impact, any risks whose risk score has been changed by more than 7, any risks whose risk score before change was more than 17, any risks whose impact category exceeds the threshold of damaging/major, and any risks whose contingency draws on NOIRLab funds. 
+ If escalation is needed beyond NOIRLab, the Risk Board will review it with the RDO before engaging the agencies. 
  All escalated risks should be reported within 7 days of management discovery.
